@@ -26,7 +26,7 @@ export default function App() {
       className="relative flex-1 items-center bg-gray-900 px-8"
       imageStyle={{ position: "absolute", left: "-100%" }}
     >
-      <StatusBar style="auto" translucent />
+      <StatusBar translucent />
       <StyledStripes className="absolute left-2" />
 
       <View className="flex-1 items-center justify-center gap-6">
