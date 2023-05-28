@@ -13,13 +13,13 @@ export async function GET(request: NextRequest) {
 
   const { token } = registerResponse.data;
 
-  const redirectUrl = redirectTo ?? new URL("/", request.url);
+  const redirectURL = redirectTo ?? new URL("/", request.url);
 
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30;
 
-  return NextResponse.redirect(redirectUrl, {
+  return NextResponse.redirect(redirectURL, {
     headers: {
-      "Set-Cookie": `token=${token}; Path=/; max-age=${cookieExpiresInSeconds}`,
+      "Set-Cookie": `token=${token}; Path=/; max-age=${cookieExpiresInSeconds};`,
     },
   });
 }
